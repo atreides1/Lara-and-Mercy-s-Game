@@ -132,4 +132,32 @@ function toggleCalmDown() {
     p.innerHTML = "Somehow I am sitting down now.<br>Someone brought me here.<br>My face and hands feel soaked with tears and sweat.<br>Even now I cannot remain still. No part of my body can.";
     options.style.visibility = "visible";
   }
+};
+
+function toggleText()
+{
+  const p = document.getElementById("peace");
+  p.innerHTML = "I feel the heaviness in my chest subside faintly. Maybe this is what I needed after all.";
+  const a = document.createElement('a');
+  const linkText = document.createTextNode("Continue");
+  a.appendChild(linkText);
+  a.href = "party.html";
+  document.body.appendChild(a);
+}
+
+function toggleText2()
+{
+  const p = document.getElementById("lies");
+  p.innerHTML = "I cannot trust those words. I push everything back inside me and carry on as well as I can";
+  const a = document.createElement('a');
+  const linkText = document.createTextNode("Continue");
+  a.appendChild(linkText);
+  a.href = "party.html";
+  document.body.appendChild(a);
+}
+
+function toggleParty()
+{
+  var p = document.getElementById("party");
+  p.style.visibility = "visible";
 }

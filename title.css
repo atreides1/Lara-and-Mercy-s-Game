@@ -9,7 +9,8 @@ body
   width: 30em;
 }
 
-button {
+button
+{
     background-color: white;
     border: 2px solid black;
     color: black;
@@ -29,7 +30,8 @@ button:hover {
   color: white;
 }
 */
-a {
+a
+{
   color: black;
   background-color: transparent;
   text-decoration: none;
@@ -38,18 +40,26 @@ a {
   display: block;
 }
 
-a:hover {
+a:hover
+{
   color: darkGrey;
   text-decoration: underline;
   text-align: center;
   display: block;
 }
 
-#panic {
+#panic
+{
   background-color: black;
   color: white;
 }
 
-#options {
+#options
+{
+  visibility: hidden;
+}
+
+#party
+{
   visibility: hidden;
 }
