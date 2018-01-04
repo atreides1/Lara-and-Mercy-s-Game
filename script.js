@@ -119,11 +119,15 @@ function toggleCalmDown() {
   const x = document.getElementById("calmDown").innerHTML;
   const p = document.getElementById("calmText");
   const options = document.getElementById("options");
+  const b = document.getElementById("panic");
+  const escape = document.getElementById("escape");
   const m1 = "Continue";
   const m2 = "Lila, are you alright?";
 
   if (x == m1)
   {
+    escape.parentNode.removeChild(escape);
+    b.style.backgroundColor = "#65546B";
     here.innerHTML = m2;
     p.innerHTML = "Somehow I am sitting down now.<br>Someone brought me here.<br>My face and hands feel soaked with tears and sweat.<br>Even now I cannot remain still. No part of my body can.";
     options.style.visibility = "visible";
