@@ -1,11 +1,12 @@
 body
 {
-  margin: 0;
-  padding: 0;
   background-color: #65546B;
   font-family: serif;
   font-size: 32px;
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 auto;
+  width: 30em;
 }
 
 a {
