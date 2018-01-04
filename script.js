@@ -1,9 +1,20 @@
-let pos = 0;
-let neg = 0;
-
+function begin()
+{
+  if (typeof(Storage) !== "undefined") {
+      // Code for localStorage/sessionStorage.
+      sessionStorage.setItem("pos", 0);
+      sessionStorage.setItem("neg", 0);
+  } else {
+      console.log("No can do, your browser does not support web storage, sorry!")
+  }
+};
+//let pos = 0;
+//let neg = 0;
+console.log(sessionStorage.pos);
+console.log(sessionStorage.neg);
 function updateScore()
 {
-  if (pos >= neg)
+  if (Number(sessionStorage.pos) >= Number(sessionStorage.neg))
   {
     d = document.getElementById("next");
     p = document.createElement('a');
@@ -25,14 +36,14 @@ function updateScore()
 
 function updatePos()
 {
-  pos++;
-  console.log(pos);
+  sessionStorage.pos = Number(sessionStorage.pos) + 1;
+  console.log(sessionStorage.pos);
 };
 
 function updateNeg()
 {
-  neg++;
-  console.log(neg);
+  sessionStorage.neg = Number(sessionStorage.neg) + 1;
+  console.log(sessionStorage.neg);
 };
 
 function firstChoice()
