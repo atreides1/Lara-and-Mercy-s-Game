@@ -61,6 +61,15 @@ a:hover
   text-align: center;
   display: block;
 }
+#hid
+{
+  visibility: hidden;
+}
+
+#rudeConvo
+{
+  font-family: 'Fjalla One', sans-serif;
+}
 
 #panic
 {
