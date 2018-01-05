@@ -92,6 +92,16 @@ a:hover
   font-weight: 600;
   font-family: 'Permanent Marker', cursive;
 }
+#sunshine
+{
+  font-size: 30px;
+  font-family: 'Handlee', cursive;
+
+}
+#out
+{
+  font-family: 'Gloria Hallelujah', cursive;
+}
 .boss
 {
   font-size: 30px;
