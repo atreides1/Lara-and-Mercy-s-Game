@@ -61,6 +61,11 @@ a:hover
   text-align: center;
   display: block;
 }
+
+.diary
+{
+  font-family: 'Gloria Hallelujah', cursive;
+}
 #hid
 {
   visibility: hidden;
