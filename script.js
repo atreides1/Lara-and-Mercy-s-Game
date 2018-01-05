@@ -87,7 +87,7 @@ function toggleRudeConvo()
   {
     here.innerHTML = m2;
     bar.src = "bar_with_customer.jpg"
-    var css = '#warp:hover{ content:url("warped_bar.jpg")}';
+    var css = '#warp:hover{ content:url("warped_bar.jpg") }';
     var style = document.createElement('style');
 
     if (style.styleSheet) {
@@ -141,7 +141,7 @@ function toggleCalmDown() {
     escape.parentNode.removeChild(escape);
     b.style.backgroundColor = "#65546B";
     here.innerHTML = m2;
-    p.innerHTML = "Somehow I am sitting down now.<br>Someone brought me here.<br>My face and hands feel soaked with tears and sweat.<br>Even now I cannot remain still. No part of my body can.";
+    p.innerHTML = "Somehow I am sitting down now.<br>Someone brought me here.<br>My face and hands feel soaked with tears and sweat.<br>Even now I cannot remain still. No part of my body can. My manager is in front of me.";
     options.style.visibility = "visible";
   }
 };
