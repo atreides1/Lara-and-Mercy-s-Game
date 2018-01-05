@@ -102,22 +102,22 @@ function toggleRudeConvo()
   {
 
   here.innerHTML = m3;
-  here.style.fontFamily = 'Indie Flower', cursive;
+  here.style.fontFamily = "'Indie Flower', cursive";
   }
   if (x == m3)
   {
     here.innerHTML = m4;
-    here.style.fontFamily = 'Fjalla One', sans-serif;
+    here.style.fontFamily = "'Fjalla One', sans-serif";
   }
   if (x == m4)
   {
     here.innerHTML = m5;
-    here.style.fontFamily = 'Indie Flower', cursive;
+    here.style.fontFamily = "'Indie Flower', cursive";
   }
   if (x == m5)
   {
     here.innerHTML = m6;
-    here.style.fontFamily = 'Fjalla One', sans-serif;
+    here.style.fontFamily = "'Fjalla One', sans-serif";
   }
   if (x == m6)
   {
@@ -147,6 +147,9 @@ function toggleCalmDown() {
     escape.parentNode.removeChild(escape);
     b.style.backgroundColor = "#65546B";
     here.innerHTML = m2;
+    here.style.fontFamily = "'Caveat', cursive";
+    here.style.fontSize = "30px";
+
     hid.style.visibility = "visible";
     p.innerHTML = "Somehow I am sitting down now.<br>Someone brought me here.<br>My face and hands feel soaked with tears and sweat.<br>Even now I cannot remain still. No part of my body can. My manager is in front of me.";
 
