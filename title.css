@@ -9,7 +9,16 @@ body
   margin: 0 auto;
   width: 30em;
 }
-p {
+h1
+{
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  margin-top: 5%;
+  font-weight: 700;
+
+}
+p
+{
   margin-top: 5%;
   line-height: 150%
 }
