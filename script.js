@@ -74,6 +74,7 @@ function toggleRudeConvo()
   const here = document.getElementById("rudeConvo");
   const x = document.getElementById("rudeConvo").innerHTML;
   const p = document.getElementById("freakOut");
+  const bar = document.getElementById("warp");
 
   const m1 = "click to continue";
   const m2 = "Hey doll face, I've been calling you,"
@@ -85,6 +86,17 @@ function toggleRudeConvo()
   if (x == m1)
   {
     here.innerHTML = m2;
+    bar.src = "bar_with_customer.jpg"
+    var css = '#warp:hover{ content:url("warped_bar.jpg")}';
+    var style = document.createElement('style');
+
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+
+    document.getElementsByTagName('head')[0].appendChild(style)
   }
   if(x == m2)
   {
