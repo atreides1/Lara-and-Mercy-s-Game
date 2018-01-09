@@ -224,12 +224,12 @@ a:hover
 {
   /*margin-top: 25%;*/
   font-weight: 700;
-  font-size: 8vw;
+  font-size: 4em;
   font-family: 'Dosis', sans-serif;
 }
 
 #play
 {
   /*margin-top: 25%;*/
-  font-size: 5vw;
+  font-size: 2em;
 }
