@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="title.css">
     <title>You lied.</title>
   </head>
@@ -8,10 +9,13 @@
       <source src="Busy Cafe Ambient Noise - 3 minutes.mp3" type="audio/mpeg" autoplay = "true">
           Your browser does not support the audio element.
       </audio>
-    <img src="sadBoss.jpg" alt = "A sad boss" width = "600">
-    <button onclick = "toggleText2()" class = "boss">You don’t need to push yourself, you know? It’s fine if this is something you can’t deal with right now.</button>
-    <p id = "lies"></p>
-    <!--<a href = "party.html">Next</a>-->
+    <div class = "pic_no_text">
+      <img src="sadBoss.jpg" alt = "A sad boss" width = "600">
+    </div>
+    <div class = "actions">
+      <button onclick = "toggleText2()" class = "boss">You don’t need to push yourself, you know? It’s fine if this is something you can’t deal with right now.</button>
+      <p id = "lies"></p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

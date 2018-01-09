@@ -148,7 +148,7 @@ function toggleCalmDown() {
     b.style.backgroundColor = "#65546B";
     here.innerHTML = m2;
     here.style.fontFamily = "'Caveat', cursive";
-    here.style.fontSize = "30px";
+    here.style.fontSize = "1em";
 
     hid.style.visibility = "visible";
     p.innerHTML = "Somehow I am sitting down now.<br>Someone brought me here.<br>My face and hands feel soaked with tears and sweat.<br>Even now I cannot remain still. No part of my body can. My manager is in front of me.";
@@ -171,7 +171,7 @@ function toggleText()
 function toggleText2()
 {
   const p = document.getElementById("lies");
-  p.innerHTML = "I cannot trust those words. I push everything back inside me and carry on as well as I can";
+  p.innerHTML = "I cannot trust those words. I push everything back inside me and carry on as well as I can.";
   const a = document.createElement('a');
   const linkText = document.createTextNode("Continue");
   a.appendChild(linkText);
