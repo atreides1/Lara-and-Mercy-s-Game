@@ -69,16 +69,20 @@ function secondChoice()
 {
   const p2 = document.getElementById('p2');
   const n2 = document.getElementById('n2');
+  const neu2 = document.getElementById('neu2');
   p2.addEventListener('click', updatePos);
   n2.addEventListener('click', updateNeg);
+  neu2.addEventListener('click', updateNeutral);
 };
 
 function thirdChoice()
 {
   const p3 = document.getElementById('p3');
   const n3 = document.getElementById('n3');
+  const neu3 = document.getElementById('neu3');
   p3.addEventListener('click', updatePos);
   n3.addEventListener('click', updateNeg);
+  neu3.addEventListener('click', updateNeutral);
 };
 
 function toggleRudeConvo()
