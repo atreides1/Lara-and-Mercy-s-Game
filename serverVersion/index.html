@@ -1,0 +1,40 @@
+<html lang = "en-US">
+  <head>
+    <link rel="stylesheet" type="text/css" href="title.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lila - Mercy and Lara's Game</title>
+  </head>
+  <body onload = "connectToServer()">
+      <div id = "title">
+        <img src="Titlecard.png" alt="Lila">
+      </div>
+      <div class = "left">
+        <a href = "morning0.html">
+            <img src = "English.png" alt = "Hello">
+        </a>
+      </div>
+      <div class = "right"  hreflang = "es">
+        <a href = "morning0.html">
+            <img src = "Spanish.png" alt = "Hello">
+        </a>
+      </div>
+    <script src="script.js"></script>
+    <script>begin()</script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script> 
+    var socket = io();
+    
+    function connectToServer() {
+      socket.emit('user input', "test");
+    }
+
+    socket.on('server output', function(msg){
+      console.log("server output: " + msg);
+    });
+    </script>
+
+  </body>
+</html>
