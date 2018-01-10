@@ -1,19 +1,20 @@
+//store score on user's end
 function begin()
 {
   if (typeof(Storage) !== "undefined") {
       // Code for localStorage/sessionStorage.
-      sessionStorage.setItem("pos", 0);
-      sessionStorage.setItem("neg", 0);
+      sessionStorage.setItem("score", 0);
+      //sessionStorage.setItem("neg", 0);
   } else {
       console.log("No can do, your browser does not support web storage, sorry!")
   }
 };
 
-//console.log(sessionStorage.pos);
-//console.log(sessionStorage.neg);
-function updateScore()
+console.log(sessionStorage.score);
+//update the end based off of score
+function updateEnd()
 {
-  if (Number(sessionStorage.pos) >= Number(sessionStorage.neg))
+  if (Number(sessionStorage.score) > 0)
   {
     d = document.getElementById("next");
     p = document.createElement('a');
@@ -33,24 +34,35 @@ function updateScore()
   return true
 };
 
+//when the user makes a positive choice we add a point
 function updatePos()
 {
-  sessionStorage.pos = Number(sessionStorage.pos) + 1;
-  console.log(sessionStorage.pos);
+  sessionStorage.score = Number(sessionStorage.score) + 1;
+  console.log(sessionStorage.score);
 };
 
+//similarly, a negative choice subtracts one point
 function updateNeg()
 {
-  sessionStorage.neg = Number(sessionStorage.neg) + 1;
-  console.log(sessionStorage.neg);
+  sessionStorage.score = Number(sessionStorage.score) - 1;
+  console.log(sessionStorage.score);
 };
+
+//similarly, a neutral choice adds half a point
+function updateNeutral()
+{
+  sessionStorage.score = Number(sessionStorage.score) + 0.5;
+  console.log(sessionStorage.score);
+}
 
 function firstChoice()
 {
   const p1 = document.getElementById('p1');
   const n1 = document.getElementById('n1');
+  const neu1 = document.getElementById('neu1');
   p1.addEventListener('click', updatePos);
   n1.addEventListener('click', updateNeg);
+  neu1.addEventListener('click', updateNeutral);
 };
 
 function secondChoice()
