@@ -12,11 +12,17 @@ img
 }
 .left
 {
+  position: absolute;
+  top: 20vw;
+  left: 0vw;
   float: left;
 }
 .right
 {
-  float: right;
+  position: absolute;
+  top: 20vw;
+  left: 70vw;
+  float: left;
 }
 .text
 {
@@ -63,6 +69,11 @@ img
   img
   {
     max-width: 100%;
+  }
+  .left, .right
+  {
+    display: block;
+    position: static;
   }
 }
 
@@ -140,6 +151,11 @@ a:hover
   line-height: 150%;
 }
 
+.lang
+{
+  max-width: 80%;
+}
+
 #hid
 {
   visibility: hidden;
@@ -189,7 +205,7 @@ a:hover
 
 #title
 {
-
+  position: relative;
   text-align: center;
 }
 
