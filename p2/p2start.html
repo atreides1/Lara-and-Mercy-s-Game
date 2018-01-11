@@ -22,6 +22,16 @@
       </div>
     </div>
     <script src="../script.js"></script>
-    <script>begin()</script>
+    <script>
+      begin();
+      function emitEvent()
+      {
+        socket.emit("getRoom", "ghost");
+      };
+      emitEvent();
+      socket.on("returnRoom", function (msg) {
+        storeRoom(msg);
+      });
+    </script>
   </body>
 </html>
