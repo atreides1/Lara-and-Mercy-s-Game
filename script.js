@@ -147,6 +147,68 @@ function toggleRudeConvo()
   }
 };
 
+function p2toggleRudeConvo()
+{
+  const here = document.getElementById("rudeConvo");
+  const x = document.getElementById("rudeConvo").innerHTML;
+  const p = document.getElementById("freakOut");
+  const bar = document.getElementById("warp");
+
+  const m1 = "click to continue";
+  const m2 = "Hey doll face, I've been calling you,"
+  const m3 = "Is something wrong, sir?"
+  const m4 = "Do your parents still send you money?"
+  const m5 = "I-I'm sorry...?"
+  const m6 = "I just can't imagine how you could make a living if you live off of tips. My food may as well be freezing. Are you gonna fix this?";
+
+  if (x == m1)
+  {
+    here.innerHTML = m2;
+    bar.src = "bar_with_customer.jpg"
+    var css = '#warp:hover{ content:url("warped_bar.jpg") }';
+    var style = document.createElement('style');
+
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+
+    document.getElementsByTagName('head')[0].appendChild(style)
+  }
+  if(x == m2)
+  {
+
+  here.innerHTML = m3;
+  here.style.fontFamily = "'Indie Flower', cursive";
+  }
+  if (x == m3)
+  {
+    here.innerHTML = m4;
+    here.style.fontFamily = "'Fjalla One', sans-serif";
+  }
+  if (x == m4)
+  {
+    here.innerHTML = m5;
+    here.style.fontFamily = "'Indie Flower', cursive";
+  }
+  if (x == m5)
+  {
+    here.innerHTML = m6;
+    here.style.fontFamily = "'Fjalla One', sans-serif";
+  }
+  if (x == m6)
+  {
+    here.parentNode.removeChild(here);
+    p.innerHTML = "I feel my insides burning. I need to get away. <br> I cannot stay here. <br> My whole body is moving, but it’s not me causing it. I’m trembling violently and I can’t do anything about it.";
+    var a = document.createElement('a');
+    var linkText = document.createTextNode("Continue");
+    a.appendChild(linkText);
+    a.href = "p2workWithChoices.html";
+    document.body.appendChild(a);
+  }
+};
+
 function toggleCalmDown() {
   const here = document.getElementById("calmDown");
   const x = document.getElementById("calmDown").innerHTML;
@@ -184,6 +246,17 @@ function toggleText()
   document.body.appendChild(a);
 }
 
+function p2toggleText()
+{
+  const p = document.getElementById("peace");
+  p.innerHTML = "I feel the heaviness in my chest subside faintly. Maybe this is what I needed after all.";
+  const a = document.createElement('a');
+  const linkText = document.createTextNode("Continue");
+  a.appendChild(linkText);
+  a.href = "p2party.html";
+  document.body.appendChild(a);
+}
+
 function toggleText2()
 {
   const p = document.getElementById("lies");
@@ -192,5 +265,16 @@ function toggleText2()
   const linkText = document.createTextNode("Continue");
   a.appendChild(linkText);
   a.href = "party.html";
+  document.body.appendChild(a);
+}
+
+function p2toggleText2()
+{
+  const p = document.getElementById("lies");
+  p.innerHTML = "I cannot trust those words. I push everything back inside me and carry on as well as I can.";
+  const a = document.createElement('a');
+  const linkText = document.createTextNode("Continue");
+  a.appendChild(linkText);
+  a.href = "p2party.html";
   document.body.appendChild(a);
 }
