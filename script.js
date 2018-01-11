@@ -10,6 +10,22 @@ function begin()
   }
 };
 
+function storeRoom()
+{
+  if (typeof(Storage) !== "undefined") {
+      // Code for localStorage/sessionStorage.
+      sessionStorage.setItem("room", "")
+  } else {
+      console.log("No can do, your browser does not support web storage, sorry!");
+  }
+};
+
+function getRoom()
+{
+  return sessionStorage.getItem("room", "");
+
+};
+
 console.log(sessionStorage.score);
 //update the end based off of score
 function updateEnd()
