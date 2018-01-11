@@ -5,7 +5,7 @@
 
     <title>Lila - Morning*</title>
   </head>
-  <body>
+  <body onload = "getBlock()">
     <div class = "pic_no_text">
       <img src="2.jpg" alt="Purple-haired woman glancing in the mirror." width = "600">
     </div>
@@ -16,5 +16,27 @@
     </div>
     <script src="script.js"></script>
     <script>firstChoice()</script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    var socket = io();
+
+    function getBlock() {
+      socket.emit('getBlock', "0");
+    }
+
+    socket.on('block', function(msg){
+      console.log("blocked: " + msg);
+      if(msg == "1"){
+        document.getElementById("n1").style.display = "none";
+      }
+      if(msg == "2"){
+        document.getElementById("p1").style.display = "none";
+      }
+      if(msg == "3"){
+        document.getElementById("neu1").style.display = "none";
+      }
+
+    });
+    </script>
   </body>
 </html>

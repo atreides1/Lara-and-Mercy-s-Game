@@ -194,3 +194,8 @@ function toggleText2()
   a.href = "party.html";
   document.body.appendChild(a);
 }
+
+
+
+
+

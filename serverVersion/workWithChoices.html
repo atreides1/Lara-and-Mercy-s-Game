@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="title.css">
     <title>Lila - Work*</title>
   </head>
-  <body id = "panic">
+  <body id = "panic" onload = "getBlock()">
     <audio autoplay = "true">
       <source src="Busy Cafe Ambient Noise - 3 minutes.mp3" type="audio/mpeg" autoplay = "true">
           Your browser does not support the audio element.
@@ -26,5 +26,27 @@
     </div>
     <script src="script.js"></script>
     <script>secondChoice()</script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    var socket = io();
+
+    function getBlock() {
+      socket.emit('getBlock', "1");
+    }
+
+    socket.on('block', function(msg){
+      console.log("blocked: " + msg);
+      if(msg == "1"){
+        document.getElementById("p2").style.display = "none";
+      }
+      if(msg == "2"){
+        document.getElementById("n2").style.display = "none";
+      }
+      if(msg == "3"){
+        document.getElementById("neu2").style.display = "none";
+      }
+
+    });
+    </script>
   </body>
 </html>
