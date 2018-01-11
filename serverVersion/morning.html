@@ -5,7 +5,7 @@
 
     <title>Lila - Morning*</title>
   </head>
-  <body onload = "getBlock()">
+  <body onload = "hideAll()">
     <div class = "pic_no_text">
       <img src="2.jpg" alt="Purple-haired woman glancing in the mirror." width = "600">
     </div>
@@ -20,6 +20,13 @@
     <script>
     var socket = io();
 
+    function hideAll(){
+      document.getElementById("n1").style.display = "none";
+      document.getElementById("p1").style.display = "none";
+      document.getElementById("neu1").style.display = "none";
+      getBlock();
+    }
+
     function getBlock() {
       socket.emit('getBlock', "0");
     }
@@ -28,11 +35,17 @@
       console.log("blocked: " + msg);
       if(msg == "1"){
         document.getElementById("n1").style.display = "none";
+        document.getElementById("p1").style.display = "initial";
+        document.getElementById("neu1").style.display = "initial";
       }
       if(msg == "2"){
+        document.getElementById("n1").style.display = "initial";
         document.getElementById("p1").style.display = "none";
+        document.getElementById("neu1").style.display = "initial";
       }
       if(msg == "3"){
+        document.getElementById("n1").style.display = "initial";
+        document.getElementById("p1").style.display = "initial";
         document.getElementById("neu1").style.display = "none";
       }
 

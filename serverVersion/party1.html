@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="title.css">
     <title>Lila - The Party*</title>
   </head>
-  <body onload = "getBlock()">
+  <body onload = "hideAll()">
     <audio autoplay = "true">
       <source src="Party 2 ⁄ People Talking and Music - Sound Effect.mp3" type="audio/mpeg" autoplay = "true">
           Your browser does not support the audio element.
@@ -23,6 +23,13 @@
     <script>
     var socket = io();
 
+    function hideAll(){
+      document.getElementById("p3").style.display = "none";
+      document.getElementById("n3").style.display = "none";
+      document.getElementById("neu3").style.display = "none";
+      getBlock();
+    }
+
     function getBlock() {
       socket.emit('getBlock', "2");
     }
@@ -31,11 +38,17 @@
       console.log("blocked: " + msg);
       if(msg == "1"){
         document.getElementById("p3").style.display = "none";
+        document.getElementById("n3").style.display = "initial";
+        document.getElementById("neu3").style.display = "initial";
       }
       if(msg == "2"){
+        document.getElementById("p3").style.display = "initial";
         document.getElementById("n3").style.display = "none";
+        document.getElementById("neu3").style.display = "initial";
       }
       if(msg == "3"){
+        document.getElementById("p3").style.display = "initial";
+        document.getElementById("n3").style.display = "initial";
         document.getElementById("neu3").style.display = "none";
       }
 

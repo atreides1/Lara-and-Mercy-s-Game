@@ -6,35 +6,14 @@
 
     <title>Lila - Mercy and Lara's Game</title>
   </head>
-  <body onload = "connectToServer()">
-      <div id = "title">
-        <img src="Titlecard.png" alt="Lila">
-      </div>
-      <div class = "left">
-        <a href = "morning0.html">
-            <img src = "English.png" alt = "Hello">
-        </a>
-      </div>
-      <div class = "right"  hreflang = "es">
-        <a href = "morning0.html">
-            <img src = "Spanish.png" alt = "Hello">
-        </a>
-      </div>
+  <body>
+    <p>Lila’s objective is to get the best possible outcome today, but someone else is involved…
+No one except the second player will know their intentions. They may help Lila, but they may want to ruin her day instead. The second player will get to delete a choice out of the ones available to accomplish what they want, leaving only the remaining for Lila.
+Make the best possible choices for you.
+  </p>
+
+    <a href = "start.html"> Lila </a>
+    <a href = "p2/p2start.html"> Player 2</a>
     <script src="script.js"></script>
-    <script>begin()</script>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script> 
-    var socket = io();
-    
-    function connectToServer() {
-      socket.emit('user input', "test");
-    }
-
-    socket.on('server output', function(msg){
-      console.log("server output: " + msg);
-    });
-    </script>
-
   </body>
 </html>
