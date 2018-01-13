@@ -6,14 +6,32 @@
 
     <title>Lila - Mercy and Lara's Game</title>
   </head>
-  <body>
-    <p>Lila’s objective is to get the best possible outcome today, but someone else is involved…
-No one except the second player will know their intentions. They may help Lila, but they may want to ruin her day instead. The second player will get to delete a choice out of the ones available to accomplish what they want, leaving only the remaining for Lila.
-Make the best possible choices for you.
-  </p>
+  <body style="background-color: black">
+      <div id = "title">
+        <img src="Titlecard.png" alt="Lila">
 
-    <a href = "start.html"> Lila </a>
-    <a href = "p2/p2start.html"> Player 2</a>
+      <div class = "left">
+        <a href = "morning0.html">
+            <img class = "lang" src = "English.png" alt = "Hello" >
+        </a>
+      </div>
+      <div class = "right"  hreflang = "es">
+        <a href = "morning0.html">
+            <img class = "lang" src = "Spanish.png" alt = "Hello">
+        </a>
+      </div>
+    </div>
     <script src="script.js"></script>
+    <script>
+      begin();
+      function emitEvent()
+      {
+        socket.emit("getRoom", "lila");
+      };
+      emitEvent();
+      socket.on("returnRoom", function (msg) {
+        storeRoom(msg);
+      });
+    </script>
   </body>
 </html>
